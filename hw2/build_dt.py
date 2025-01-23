@@ -13,13 +13,19 @@ arg_parser.add_argument('--min_gain', required=True, type=str, help='min gain')
 args = arg_parser.parse_args()
 
 def parse_input(input) -> pd.DataFrame:
-    data = []
+    raw_data = []
     for line in input:
         parts = line.strip().split()
         doc_class = parts[0]
-        words = {pair.split(":")[0]: pair.split(":")[1] for pair in parts[1:]}
-        data.append({"class": doc_class, **words})
-    return pd.DataFrame(data).fillna(0)
+        words = {pair.split(":")[0]: 1 for pair in parts[1:]}
+        raw_data.append({"this_class": doc_class, **words})
+    data = pd.DataFrame(raw_data).fillna(0)
+    classes = data["this_class"]
+    presence_counts = data.groupby(classes).sum()
+    total_counts = data.groupby(classes).count()
+    absence_counts = total_counts - presence_counts
+    return data, presence_counts, absence_counts, total_counts
+
 
 def preprocess_data(df: pd.DataFrame) -> tuple[pd.DataFrame, np.ndarray]:
     le = LabelEncoder()
@@ -28,12 +34,12 @@ def preprocess_data(df: pd.DataFrame) -> tuple[pd.DataFrame, np.ndarray]:
     X_train = df.drop(columns=["class"])
     return X_train, y_train
 
-def entropy(y: list[int]) -> float:
+def entropy(y: np.ndarray) -> float:
     counts = np.bincount(y)
     probs = counts / len(y)
     return -np.sum([p * log2(p) for p in probs if p > 0])  
 
-def information_gain(y: list[int], y_left: list[int], y_right: list[int]) -> float:
+def information_gain(y: np.ndarray, y_left: np.ndarray, y_right: np.ndarray) -> float:
     parent_entropy = entropy(y)      
     entropy_left = entropy(y_left)
     entropy_right = entropy(y_right)
@@ -57,6 +63,7 @@ class DecisionTree:
 
     def build_tree(self, X: pd.DataFrame, y: np.ndarray, depth: int) -> dict:
         # Align y with X index only in the initial call
+        print("Begin iteration")
         if depth == 0:
             y = pd.Series(y, index=X.index)
 
@@ -73,7 +80,9 @@ class DecisionTree:
         best_feature = None
         best_split = None
 
+        print("entering feature loop")
         for feature in X.columns:
+            print(feature)
             left_indices = X[feature] == 0
             right_indices = X[feature] == 1
 
@@ -81,12 +90,16 @@ class DecisionTree:
             X_left, X_right = X[left_indices], X[right_indices]
             y_left, y_right = y[left_indices], y[right_indices]
 
+            if len(y_left) == 0 or len(y_right) == 0:
+                continue  # Skip this feature
+
             gain = information_gain(y.values, y_left.values, y_right.values)
             if gain > best_gain:
                 best_gain = gain
                 best_feature = feature
                 best_split = (X_left, X_right, y_left.values, y_right.values)
 
+        print("exit feature loop")
         if best_gain < self.min_gain:
             distribution = Counter(y)
             return {
@@ -104,25 +117,32 @@ class DecisionTree:
             "right": right_tree,
         }
 
-
-
-
 def main():
+    print("Starting")
     with open(args.train, 'r') as train_file:
         with open(args.test, 'r') as test_file:
-            raw_train_data = parse_input(train_file)
+            raw_train_data, presence, absence, total = parse_input(train_file)
+            print(raw_train_data)
+            print(presence)
+            print(absence)
+            print(total)
             training_data, training_labels = preprocess_data(raw_train_data)
-            raw_test_data = parse_input(test_file)
-            testing_data, _ = preprocess_data(raw_test_data)
-            tree = DecisionTree(max_depth=int(args.max_depth), min_gain=float(args.min_gain))
-            tree.fit(training_data, training_labels)
-            predictions = tree.predict(testing_data, return_full_node=True)
-            for i, pred in enumerate(predictions):
-                label_dist = " ".join(
-                    f"{label} {pred['distribution'][label] / sum(pred['distribution'].values()):.2f}"
-                    for label in sorted(pred["distribution"])
-                )
-                print(f"Line {i + 1}: Prediction {pred['prediction']} {label_dist}")
+            print("TRAINING DATA")
+            print(training_data)
+            print("TRAINING LABELS")
+            print(training_labels)
+            # raw_test_data = parse_input(test_file)
+            # testing_data, _ = preprocess_data(raw_test_data)
+            # print("Data parsed")
+            # tree = DecisionTree(max_depth=int(args.max_depth), min_gain=float(args.min_gain))
+            # tree.fit(training_data, training_labels)
+            # predictions = tree.predict(testing_data, return_full_node=True)
+            # for i, pred in enumerate(predictions):
+            #     label_dist = " ".join(
+            #         f"{label} {pred['distribution'][label] / sum(pred['distribution'].values()):.2f}"
+            #         for label in sorted(pred["distribution"])
+            #     )
+            #     print(f"Line {i + 1}: Prediction {pred['prediction']} {label_dist}")
 
 
 if __name__ == "__main__":

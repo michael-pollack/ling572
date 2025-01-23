@@ -1,0 +1,53 @@
+Starting
+              this_class    a  about  absurd  ...  jgs  burian  evidience  tundra
+0     talk.politics.guns  1.0    1.0     1.0  ...  0.0     0.0        0.0     0.0
+1     talk.politics.guns  1.0    1.0     0.0  ...  0.0     0.0        0.0     0.0
+2     talk.politics.guns  1.0    1.0     0.0  ...  0.0     0.0        0.0     0.0
+3     talk.politics.guns  1.0    1.0     0.0  ...  0.0     0.0        0.0     0.0
+4     talk.politics.guns  1.0    0.0     0.0  ...  0.0     0.0        0.0     0.0
+...                  ...  ...    ...     ...  ...  ...     ...        ...     ...
+2695  talk.politics.misc  1.0    1.0     0.0  ...  0.0     0.0        0.0     0.0
+2696  talk.politics.misc  1.0    0.0     0.0  ...  0.0     0.0        0.0     0.0
+2697  talk.politics.misc  1.0    0.0     0.0  ...  1.0     0.0        0.0     0.0
+2698  talk.politics.misc  1.0    1.0     0.0  ...  0.0     1.0        1.0     1.0
+2699  talk.politics.misc  1.0    0.0     0.0  ...  0.0     0.0        0.0     0.0
+
+[2700 rows x 32847 columns]
+                           a  about  absurd  ...  burian  evidience  tundra
+this_class                                   ...                           
+talk.politics.guns     826.0  397.0     8.0  ...     0.0        0.0     0.0
+talk.politics.mideast  827.0  400.0     9.0  ...     0.0        0.0     0.0
+talk.politics.misc     826.0  433.0    10.0  ...     1.0        1.0     1.0
+
+[3 rows x 32846 columns]
+                          a  about  absurd  ...  burian  evidience  tundra
+this_class                                  ...                           
+talk.politics.guns     74.0  503.0   892.0  ...   900.0      900.0   900.0
+talk.politics.mideast  73.0  500.0   891.0  ...   900.0      900.0   900.0
+talk.politics.misc     74.0  467.0   890.0  ...   899.0      899.0   899.0
+
+[3 rows x 32846 columns]
+                         a  about  absurd  ...  burian  evidience  tundra
+this_class                                 ...                           
+talk.politics.guns     900    900     900  ...     900        900     900
+talk.politics.mideast  900    900     900  ...     900        900     900
+talk.politics.misc     900    900     900  ...     900        900     900
+
+[3 rows x 32846 columns]
+TRAINING DATA
+              this_class    a  about  absurd  ...  jgs  burian  evidience  tundra
+0     talk.politics.guns  1.0    1.0     1.0  ...  0.0     0.0        0.0     0.0
+1     talk.politics.guns  1.0    1.0     0.0  ...  0.0     0.0        0.0     0.0
+2     talk.politics.guns  1.0    1.0     0.0  ...  0.0     0.0        0.0     0.0
+3     talk.politics.guns  1.0    1.0     0.0  ...  0.0     0.0        0.0     0.0
+4     talk.politics.guns  1.0    0.0     0.0  ...  0.0     0.0        0.0     0.0
+...                  ...  ...    ...     ...  ...  ...     ...        ...     ...
+2695  talk.politics.misc  1.0    1.0     0.0  ...  0.0     0.0        0.0     0.0
+2696  talk.politics.misc  1.0    0.0     0.0  ...  0.0     0.0        0.0     0.0
+2697  talk.politics.misc  1.0    0.0     0.0  ...  1.0     0.0        0.0     0.0
+2698  talk.politics.misc  1.0    1.0     0.0  ...  0.0     1.0        1.0     1.0
+2699  talk.politics.misc  1.0    0.0     0.0  ...  0.0     0.0        0.0     0.0
+
+[2700 rows x 32846 columns]
+TRAINING LABELS
+[0 0 0 ... 0 0 0]
