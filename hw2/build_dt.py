@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from math import log2
 from sklearn.preprocessing import LabelEncoder
+from collections import Counter
 
 arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument('--train', type=str, required=True, help='training data')
@@ -22,9 +23,9 @@ def parse_input(input) -> pd.DataFrame:
 
 def preprocess_data(df: pd.DataFrame) -> tuple[pd.DataFrame, np.ndarray]:
     le = LabelEncoder()
-    df["type_encoded"] = le.fit_transform(df["type"])
-    y_train = df.pop("type_encoded").values
-    X_train = df.drop(columns=["type"])
+    df["class_encoded"] = le.fit_transform(df["class"])
+    y_train = df.pop("class_encoded").values
+    X_train = df.drop(columns=["class"])
     return X_train, y_train
 
 def entropy(y: list[int]) -> float:
@@ -55,8 +56,18 @@ class DecisionTree:
         self.tree = self.build_tree(X, y, depth=0)
 
     def build_tree(self, X: pd.DataFrame, y: np.ndarray, depth: int) -> dict:
+        # Align y with X index only in the initial call
+        if depth == 0:
+            y = pd.Series(y, index=X.index)
+
+        # Stopping condition: if all labels are the same or max depth is reached
         if depth == self.max_depth or len(set(y)) == 1:
-            return {"leaf": True, "prediction": max(set(y), key=list(y).count)}
+            distribution = Counter(y)
+            return {
+                "leaf": True,
+                "prediction": max(distribution, key=distribution.get),
+                "distribution": distribution,
+            }
 
         best_gain = 0
         best_feature = None
@@ -65,29 +76,36 @@ class DecisionTree:
         for feature in X.columns:
             left_indices = X[feature] == 0
             right_indices = X[feature] == 1
+
+            # Slice X and y consistently
+            X_left, X_right = X[left_indices], X[right_indices]
             y_left, y_right = y[left_indices], y[right_indices]
-            gain = information_gain(y, y_left, y_right)
+
+            gain = information_gain(y.values, y_left.values, y_right.values)
             if gain > best_gain:
                 best_gain = gain
                 best_feature = feature
-                best_split = (X[left_indices], X[right_indices], y_left, y_right)
+                best_split = (X_left, X_right, y_left.values, y_right.values)
 
         if best_gain < self.min_gain:
-            return {"leaf": True, "prediction": max(set(y), key=list(y).count)}
+            distribution = Counter(y)
+            return {
+                "leaf": True,
+                "prediction": max(distribution, key=distribution.get),
+                "distribution": distribution,
+            }
 
-        left_tree = self._build_tree(*best_split[:2], depth + 1)
-        right_tree = self._build_tree(*best_split[2:], depth + 1)
-        return {"leaf": False, "feature": best_feature, "left": left_tree, "right": right_tree}
+        left_tree = self.build_tree(*best_split[:2], depth + 1)
+        right_tree = self.build_tree(*best_split[2:], depth + 1)
+        return {
+            "leaf": False,
+            "feature": best_feature,
+            "left": left_tree,
+            "right": right_tree,
+        }
 
-    def predict(self, X: pd.DataFrame) -> list:
-        def traverse(node, x):
-            if node["leaf"]:
-                return node["prediction"]
-            if x[node["feature"]] == 0:
-                return traverse(node["left"], x)
-            else:
-                return traverse(node["right"], x)
-        return np.array([traverse(self.tree, x) for _, x in X.iterrows()])
+
+
 
 def main():
     with open(args.train, 'r') as train_file:
@@ -96,9 +114,9 @@ def main():
             training_data, training_labels = preprocess_data(raw_train_data)
             raw_test_data = parse_input(test_file)
             testing_data, _ = preprocess_data(raw_test_data)
-            tree = DecisionTree(args.max_depth, args.min_gain)
+            tree = DecisionTree(max_depth=int(args.max_depth), min_gain=float(args.min_gain))
             tree.fit(training_data, training_labels)
-            predictions = tree.predict(testing_data)
+            predictions = tree.predict(testing_data, return_full_node=True)
             for i, pred in enumerate(predictions):
                 label_dist = " ".join(
                     f"{label} {pred['distribution'][label] / sum(pred['distribution'].values()):.2f}"
