@@ -4,6 +4,7 @@ import numpy as np
 from math import log2
 from sklearn.preprocessing import LabelEncoder
 from collections import Counter
+import time
 
 arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument('--train', type=str, required=True, help='training data')
@@ -43,6 +44,11 @@ def information_gain(parent: np.ndarray, left_child: np.ndarray, right_child: np
     n = len(parent)
     weighted_entropy = ((len(left_child) / n)  * entropy_left) + ((len(right_child) / n) * entropy_right)
     return parent_entropy - weighted_entropy
+
+def accuracy_score(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+    correct = (y_true == y_pred).sum()
+    total = len(y_true)
+    return correct / total
 
 class DecisionTree:
     def __init__(self, max_depth: int=None, min_gain: float=0.01) -> None:
@@ -175,7 +181,7 @@ class DecisionTree:
 
 
 def main():
-    print("Starting")
+    start = time.process_time()
     with open(args.train, 'r') as train_file:
         with open(args.test, 'r') as test_file:
             raw_train_data = parse_input(train_file)
@@ -188,9 +194,18 @@ def main():
             with open(args.model, 'w') as wipe:
                 pass
             tree.print_tree(args.model)
-            predictions = tree.predict(testing_data, return_full_node=True)
-            pred_table = tree.print_predictions(args.output, predictions, testing_labels, testing_label_map)
+            train_predictions = tree.predict(training_data, return_full_node=True)
+            test_predictions = tree.predict(testing_data, return_full_node=True)
+            train_accuracy = accuracy_score(training_labels, train_predictions)
+            test_accuracy = accuracy_score(testing_labels, test_predictions)
+            pred_table = tree.print_predictions(args.output, test_predictions, testing_labels, testing_label_map)
             tree.print_pred_table(pred_table, testing_label_map)
+    end = time.process_time()
+    print(training_labels)
+    # print(train_predictions)
+    print(f"Train Accuracy: {train_accuracy}")
+    print(f"Test Accuracy: {test_accuracy}")
+    print(f"Total CPU time: {(end - start) / 60} minutes")
 
 
 
