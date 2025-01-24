@@ -30,7 +30,6 @@ def preprocess_data(data: pd.DataFrame) -> tuple[pd.DataFrame, np.ndarray]:
     return data_train, labels_train
 
 def entropy(labels: np.ndarray) -> float:
-    print("entropy")
     counts = np.bincount(labels)
     probs = counts / len(labels)
     return -np.sum([p * log2(p) for p in probs if p > 0])  
@@ -57,60 +56,31 @@ class DecisionTree:
     def fit(self, data: pd.DataFrame, labels: np.ndarray) -> None:
         self.tree = self.build_tree(data, labels, depth=0)
 
-    def build_tree(self, data: pd.DataFrame, labels: np.ndarray, depth: int) -> dict:
-        # Align y with X index only in the initial call
-        if depth == 0:
-            labels = pd.Series(labels, index=data.index)
-
-        # Stopping condition: if all labels are the same or max depth is reached
+    def build_tree(self, data: pd.DataFrame, labels: np.ndarray, depth):
         if depth == self.max_depth or len(set(labels)) == 1:
-            distribution = Counter(labels)
-            return {
-                "leaf": True,
-                "prediction": max(distribution, key=distribution.get),
-                "distribution": distribution,
-            }
+            return {"leaf": True, "prediction": max(set(labels), key=list(labels).count)}
 
         best_gain = 0
         best_feature = None
         best_split = None
 
-        print("entering feature loop")
         for feature in data.columns:
             left_indices = data[feature] == 0
             right_indices = data[feature] == 1
-
-            # Slice X and y consistently
-            data_left, data_right = data[left_indices], data[right_indices]
-            labels_left, labels_right = labels[left_indices].values, labels[right_indices].values
-
-
-            if len(labels_left) == 0 or len(labels_right) == 0:
-                continue  # Skip this feature
-
+            labels_left, labels_right = labels[left_indices], labels[right_indices]
             gain = information_gain(labels, labels_left, labels_right)
+
             if gain > best_gain:
                 best_gain = gain
                 best_feature = feature
-                best_split = (data_left, data_right, labels_left, labels_right)
+                best_split = (data[left_indices], data[right_indices], labels_left, labels_right)
 
-        print("exit feature loop")
         if best_gain < self.min_gain:
-            distribution = Counter(labels)
-            return {
-                "leaf": True,
-                "prediction": max(distribution, key=distribution.get),
-                "distribution": distribution,
-            }
+            return {"leaf": True, "prediction": max(set(labels), key=list(labels).count)}
 
-        left_tree = self.build_tree(*best_split[:2], depth + 1)
-        right_tree = self.build_tree(*best_split[2:], depth + 1)
-        return {
-            "leaf": False,
-            "feature": best_feature,
-            "left": left_tree,
-            "right": right_tree,
-        }
+        left_tree = self.build_tree(best_split[0], best_split[2], depth + 1)
+        right_tree = self.build_tree(best_split[1], best_split[3], depth + 1)
+        return {"leaf": False, "feature": best_feature, "left": left_tree, "right": right_tree}
 
     def predict(self, data: pd.DataFrame, return_full_node: bool = False) -> list:
         def traverse(node, row):
@@ -132,7 +102,6 @@ def main():
             print(raw_train_data)
             training_data, training_labels = preprocess_data(raw_train_data)
             testing_data, _ = preprocess_data(raw_test_data)
-
             tree = DecisionTree(max_depth=int(args.max_depth), min_gain=float(args.min_gain))
             tree.fit(training_data, training_labels)
             # predictions = tree.predict(testing_data, return_full_node=True)
