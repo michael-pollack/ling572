@@ -27,7 +27,7 @@ def preprocess_data(data: pd.DataFrame) -> tuple[pd.DataFrame, np.ndarray]:
     data["class_encoded"] = le.fit_transform(data["this_class"])
     labels_train = data.pop("class_encoded").values
     data_train = data.drop(columns=["this_class"])
-    return data_train, labels_train
+    return data_train, labels_train, le.classes_
 
 def entropy(labels: np.ndarray) -> float:
     counts = np.bincount(labels)
@@ -52,9 +52,11 @@ class DecisionTree:
         self.max_depth = max_depth
         self.min_gain = min_gain
         self.tree = None
+        self.label_map = None
 
-    def fit(self, data: pd.DataFrame, labels: np.ndarray) -> None:
+    def fit(self, data: pd.DataFrame, labels: np.ndarray, label_map: np.ndarray) -> None:
         self.tree = self.build_tree(data, labels, depth=0)
+        self.label_map = label_map
 
     def build_tree(self, data: pd.DataFrame, labels: np.ndarray, depth):
         if depth == self.max_depth or len(set(labels)) == 1:
@@ -118,7 +120,7 @@ class DecisionTree:
 
             # Format the label probabilities in alphabetical order
             label_str = " ".join(
-                f"{label} {label_distribution.get(label, 0):.1f}"
+                f"{self.label_map[label]} {label_distribution.get(label, 0):.1f}"
                 for label in sorted(label_distribution)
             )
 
@@ -152,10 +154,10 @@ def main():
             raw_train_data = parse_input(train_file)
             raw_test_data = parse_input(test_file)
             print(raw_train_data)
-            training_data, training_labels = preprocess_data(raw_train_data)
-            testing_data, _ = preprocess_data(raw_test_data)
+            training_data, training_labels, label_map = preprocess_data(raw_train_data)
+            testing_data, _, _ = preprocess_data(raw_test_data)
             tree = DecisionTree(max_depth=int(args.max_depth), min_gain=float(args.min_gain))
-            tree.fit(training_data, training_labels)
+            tree.fit(training_data, training_labels, label_map)
             tree.print_tree()
             # predictions = tree.predict(testing_data, return_full_node=True)
             # for i, pred in enumerate(predictions):
