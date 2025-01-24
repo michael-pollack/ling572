@@ -59,11 +59,15 @@ class DecisionTree:
     def build_tree(self, data: pd.DataFrame, labels: np.ndarray, depth):
         if depth == self.max_depth or len(set(labels)) == 1:
             distribution = Counter(labels)
+            total_samples = sum(distribution.values())
+            probabilities = {
+                label: count / total_samples for label, count in distribution.items()
+            }
             return {
                 "leaf": True,  # Mark as a leaf node
                 "prediction": max(distribution, key=distribution.get),  # Majority label
-                "distribution": distribution,  # Distribution of labels
-                "samples": len(labels),  # Number of samples in the node
+                "distribution": probabilities,  # Probabilities of labels
+                "samples": total_samples,  # Total number of samples
             }
 
         best_gain = 0
@@ -83,11 +87,15 @@ class DecisionTree:
 
         if best_gain < self.min_gain or best_split is None:
             distribution = Counter(labels)
+            total_samples = sum(distribution.values())
+            probabilities = {
+                label: count / total_samples for label, count in distribution.items()
+            }
             return {
                 "leaf": True,
                 "prediction": max(distribution, key=distribution.get),
-                "distribution": distribution,
-                "samples": len(labels),
+                "distribution": probabilities,
+                "samples": total_samples,
             }
 
         left_tree = self.build_tree(best_split[0], best_split[2], depth + 1)
@@ -106,19 +114,15 @@ class DecisionTree:
         if node["leaf"]:
             # Extract label distribution and total number of samples
             label_distribution = node["distribution"]
-            total_samples = sum(label_distribution.values())
-            proportions = {
-                label: f"{label_distribution[label] / total_samples:.2f}"
-                for label in sorted(label_distribution)
-            }
+            total_samples = node["samples"]
 
-            # Format the label distribution for printing
+            # Format the label probabilities in alphabetical order
             label_str = " ".join(
-                f"{label} {label_distribution[label]} ({proportions[label]})"
-                for label in proportions
+                f"{label} {label_distribution.get(label, 0):.1f}"
+                for label in sorted(label_distribution)
             )
 
-            # Print the path and the label distribution
+            # Print the path, total samples, and label distribution
             print(f"{path.strip('&')} {total_samples} {label_str}")
             return
 
@@ -127,6 +131,7 @@ class DecisionTree:
 
         # Traverse the right subtree (feature == 1)
         self.print_tree(node["right"], path + f"{node['feature']}&")
+
 
 
     def predict(self, data: pd.DataFrame, return_full_node: bool = False) -> list:
