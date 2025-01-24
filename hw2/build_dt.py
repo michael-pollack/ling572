@@ -11,6 +11,7 @@ arg_parser.add_argument('--test', type=str, required=True, help='test data')
 arg_parser.add_argument('--max_depth', required=True, type=str, help='max depth')
 arg_parser.add_argument('--min_gain', required=True, type=str, help='min gain')
 arg_parser.add_argument('--model', required=True, type=str, help='model output file')
+arg_parser.add_argument('--output', required=True, type=str, help='system output file')
 args = arg_parser.parse_args()
 
 def parse_input(input) -> pd.DataFrame:
@@ -43,17 +44,13 @@ def information_gain(parent: np.ndarray, left_child: np.ndarray, right_child: np
     weighted_entropy = ((len(left_child) / n)  * entropy_left) + ((len(right_child) / n) * entropy_right)
     return parent_entropy - weighted_entropy
 
-#Decision tree will split based on features
-#We want total positive and negative instances of each feature for each class
-#Use this to build decision tree
-#Decision tree then is used on a set of features to try to determine what class it belongs to
-
 class DecisionTree:
     def __init__(self, max_depth: int=None, min_gain: float=0.01) -> None:
         self.max_depth = max_depth
         self.min_gain = min_gain
         self.tree = None
         self.label_map = None
+        self.pred_to_real = {}
 
     def fit(self, data: pd.DataFrame, labels: np.ndarray, label_map: np.ndarray) -> None:
         self.tree = self.build_tree(data, labels, depth=0)
@@ -146,6 +143,35 @@ class DecisionTree:
             else:
                 return traverse(node["right"], row)
         return [traverse(self.tree, row) for _, row in data.iterrows()]
+    
+    def print_predictions(self, file: str, predictions: list, real_labels: list, real_label_map: list) -> None:
+        prediction_table = [[0 for _ in range(len(self.label_map))] for _ in range(len(real_label_map))]
+        with open(file, 'w') as output:
+            for i, pred in enumerate(predictions):
+                label_dist = " ".join(
+                    f"{self.label_map[label]} {pred['distribution'][label] / sum(pred['distribution'].values()):.4f}"
+                    for label in sorted(pred["distribution"])
+                )
+                this_pred = pred['prediction']
+                real_label = real_labels[i]
+                prediction_table[real_label][this_pred] += 1
+                output.write(f"array:{i} Prediction {this_pred} {label_dist}\n")
+        return prediction_table
+    
+    def print_pred_table(self, pred_table: list[list], real_label_map: list) -> None:
+        table = "\t\t\t"
+        for label in self.label_map:
+            table += f"{label} "
+        table += "\n"
+        for i in range(len(pred_table)):
+            row = f"{real_label_map[i]}\t"
+            for pred_label in pred_table[i]:
+                row += f"{pred_label} "
+            row += f"\n"
+            table += row
+        print(table)
+        
+        
 
 
 def main():
@@ -154,21 +180,18 @@ def main():
         with open(args.test, 'r') as test_file:
             raw_train_data = parse_input(train_file)
             raw_test_data = parse_input(test_file)
-            print(raw_train_data)
             training_data, training_labels, label_map = preprocess_data(raw_train_data)
-            testing_data, _, _ = preprocess_data(raw_test_data)
+            testing_data, testing_labels, testing_label_map = preprocess_data(raw_test_data)
             tree = DecisionTree(max_depth=int(args.max_depth), min_gain=float(args.min_gain))
             tree.fit(training_data, training_labels, label_map)
+            #wipe the model output file
             with open(args.model, 'w') as wipe:
                 pass
             tree.print_tree(args.model)
             predictions = tree.predict(testing_data, return_full_node=True)
-            for i, pred in enumerate(predictions):
-                label_dist = " ".join(
-                    f"{label} {pred['distribution'][label] / sum(pred['distribution'].values()):.2f}"
-                    for label in sorted(pred["distribution"])
-                )
-                print(f"Line {i + 1}: Prediction {pred['prediction']} {label_dist}")
+            pred_table = tree.print_predictions(args.output, predictions, testing_labels, testing_label_map)
+            tree.print_pred_table(pred_table, testing_label_map)
+
 
 
 if __name__ == "__main__":
