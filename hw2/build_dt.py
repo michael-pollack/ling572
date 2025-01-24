@@ -10,6 +10,7 @@ arg_parser.add_argument('--train', type=str, required=True, help='training data'
 arg_parser.add_argument('--test', type=str, required=True, help='test data')
 arg_parser.add_argument('--max_depth', required=True, type=str, help='max depth')
 arg_parser.add_argument('--min_gain', required=True, type=str, help='min gain')
+arg_parser.add_argument('--model', required=True, type=str, help='model output file')
 args = arg_parser.parse_args()
 
 def parse_input(input) -> pd.DataFrame:
@@ -109,7 +110,7 @@ class DecisionTree:
             "right": right_tree,  # Right subtree
         }
     
-    def print_tree(self, node=None, path="") -> None:
+    def print_tree(self, file: str, node=None, path="") -> None:
         if node is None:
             node = self.tree  # Start from the root of the tree
 
@@ -125,15 +126,15 @@ class DecisionTree:
             )
 
             # Print the path, total samples, and label distribution
-            print(f"{path.strip('&')} {total_samples} {label_str}")
+            with open(file, 'a') as output:
+                output.write(f"{path.strip('&')} {total_samples} {label_str}\n")
             return
 
         # Traverse the left subtree (feature == 0)
-        self.print_tree(node["left"], path + f"!{node['feature']}&")
+        self.print_tree(file, node["left"], path + f"!{node['feature']}&")
 
         # Traverse the right subtree (feature == 1)
-        self.print_tree(node["right"], path + f"{node['feature']}&")
-
+        self.print_tree(file, node["right"], path + f"{node['feature']}&")
 
 
     def predict(self, data: pd.DataFrame, return_full_node: bool = False) -> list:
@@ -158,14 +159,16 @@ def main():
             testing_data, _, _ = preprocess_data(raw_test_data)
             tree = DecisionTree(max_depth=int(args.max_depth), min_gain=float(args.min_gain))
             tree.fit(training_data, training_labels, label_map)
-            tree.print_tree()
-            # predictions = tree.predict(testing_data, return_full_node=True)
-            # for i, pred in enumerate(predictions):
-            #     label_dist = " ".join(
-            #         f"{label} {pred['distribution'][label] / sum(pred['distribution'].values()):.2f}"
-            #         for label in sorted(pred["distribution"])
-            #     )
-            #     print(f"Line {i + 1}: Prediction {pred['prediction']} {label_dist}")
+            with open(args.model, 'w') as wipe:
+                pass
+            tree.print_tree(args.model)
+            predictions = tree.predict(testing_data, return_full_node=True)
+            for i, pred in enumerate(predictions):
+                label_dist = " ".join(
+                    f"{label} {pred['distribution'][label] / sum(pred['distribution'].values()):.2f}"
+                    for label in sorted(pred["distribution"])
+                )
+                print(f"Line {i + 1}: Prediction {pred['prediction']} {label_dist}")
 
 
 if __name__ == "__main__":
