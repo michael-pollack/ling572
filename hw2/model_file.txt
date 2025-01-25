@@ -1,0 +1,4 @@
+!israel&!turkish&!gun 1815 talk.politics.guns 0.3 talk.politics.mideast 0.2 talk.politics.misc 0.5
+!israel&!turkish&gun 346 talk.politics.guns 0.8 talk.politics.mideast 0.0 talk.politics.misc 0.1
+!israel&turkish 189 talk.politics.mideast 1.0 talk.politics.misc 0.0
+israel 350 talk.politics.guns 0.0 talk.politics.mideast 0.9 talk.politics.misc 0.1

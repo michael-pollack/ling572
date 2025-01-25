@@ -162,7 +162,7 @@ class DecisionTree:
                 this_pred = pred['prediction']
                 real_label = real_labels[i]
                 prediction_table[real_label][this_pred] += 1
-                output.write(f"array:{i} {label_dist}\n")
+                output.write(f"array:{i}  {label_dist}\n")
         return prediction_table
     
     def print_pred_table(self, pred_table: list[list], real_label_map: list) -> None:
