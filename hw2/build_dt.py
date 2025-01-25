@@ -45,8 +45,9 @@ def information_gain(parent: np.ndarray, left_child: np.ndarray, right_child: np
     weighted_entropy = ((len(left_child) / n)  * entropy_left) + ((len(right_child) / n) * entropy_right)
     return parent_entropy - weighted_entropy
 
-def accuracy_score(y_true: np.ndarray, y_pred: np.ndarray) -> float:
-    correct = (y_true == y_pred).sum()
+def accuracy_score(y_true: np.ndarray, y_pred: np.ndarray) -> float: 
+    pred_list = [pred['prediction'] for pred in y_pred]
+    correct = (y_true == pred_list).sum()
     total = len(y_true)
     return correct / total
 
@@ -144,7 +145,7 @@ class DecisionTree:
         def traverse(node, row):
             if node["leaf"]:
                 return node if return_full_node else node["prediction"]
-            if row[node["feature"]] == 0:
+            if node["feature"] not in row or row[node["feature"]] == 0:
                 return traverse(node["left"], row)
             else:
                 return traverse(node["right"], row)
@@ -161,7 +162,7 @@ class DecisionTree:
                 this_pred = pred['prediction']
                 real_label = real_labels[i]
                 prediction_table[real_label][this_pred] += 1
-                output.write(f"array:{i} Prediction {this_pred} {label_dist}\n")
+                output.write(f"array:{i} {label_dist}\n")
         return prediction_table
     
     def print_pred_table(self, pred_table: list[list], real_label_map: list) -> None:
@@ -198,13 +199,18 @@ def main():
             test_predictions = tree.predict(testing_data, return_full_node=True)
             train_accuracy = accuracy_score(training_labels, train_predictions)
             test_accuracy = accuracy_score(testing_labels, test_predictions)
+            train_pred_table = tree.print_predictions("trash.txt", train_predictions, training_labels, label_map)
             pred_table = tree.print_predictions(args.output, test_predictions, testing_labels, testing_label_map)
+
+            print(f"Confusion matrix for the training data:\n row is the truth, column is the system output\n\n")
+            tree.print_pred_table(train_pred_table, label_map)
+            print(f"Training Accuracy={train_accuracy}")
+
+            print(f"Confusion matrix for the testing data:\n row is the truth, column is the system output\n\n")
             tree.print_pred_table(pred_table, testing_label_map)
+            print(f"Testing Accuracy={test_accuracy}")
+
     end = time.process_time()
-    print(training_labels)
-    # print(train_predictions)
-    print(f"Train Accuracy: {train_accuracy}")
-    print(f"Test Accuracy: {test_accuracy}")
     print(f"Total CPU time: {(end - start) / 60} minutes")
 
 

@@ -1,300 +1,300 @@
-array:0 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:1 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:2 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:3 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:4 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:5 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:6 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:7 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:8 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:9 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:10 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:11 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:12 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:13 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:14 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:15 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:16 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:17 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:18 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:19 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:20 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:21 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:22 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:23 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:24 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:25 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:26 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:27 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:28 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:29 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:30 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:31 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:32 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:33 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:34 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:35 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:36 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:37 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:38 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:39 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:40 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:41 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:42 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:43 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:44 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:45 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:46 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:47 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:48 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:49 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:50 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:51 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:52 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:53 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:54 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:55 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:56 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:57 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:58 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:59 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:60 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:61 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:62 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:63 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:64 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:65 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:66 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:67 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:68 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:69 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:70 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:71 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:72 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:73 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:74 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:75 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:76 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:77 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:78 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:79 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:80 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:81 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:82 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:83 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:84 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:85 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:86 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:87 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:88 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:89 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:90 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:91 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:92 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:93 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:94 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:95 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:96 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:97 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:98 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:99 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:100 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:101 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:102 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:103 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:104 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:105 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:106 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:107 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:108 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:109 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:110 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:111 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:112 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:113 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:114 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:115 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:116 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:117 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:118 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:119 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:120 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:121 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:122 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:123 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:124 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:125 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:126 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:127 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:128 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:129 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:130 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:131 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:132 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:133 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:134 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:135 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:136 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:137 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:138 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:139 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:140 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:141 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:142 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:143 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:144 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:145 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:146 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:147 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:148 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:149 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:150 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:151 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:152 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:153 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:154 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:155 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:156 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:157 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:158 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:159 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:160 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:161 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:162 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:163 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:164 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:165 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:166 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:167 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:168 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:169 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:170 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:171 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:172 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:173 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:174 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:175 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:176 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:177 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:178 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:179 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:180 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:181 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:182 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:183 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:184 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:185 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:186 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:187 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:188 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:189 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:190 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:191 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:192 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:193 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:194 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:195 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:196 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:197 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:198 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:199 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:200 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:201 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:202 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:203 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:204 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:205 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:206 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:207 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:208 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:209 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:210 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:211 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:212 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:213 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:214 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:215 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:216 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:217 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:218 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:219 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:220 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:221 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:222 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:223 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:224 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:225 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:226 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:227 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:228 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:229 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:230 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:231 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:232 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:233 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:234 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:235 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:236 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:237 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:238 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:239 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:240 Prediction 1 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
-array:241 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:242 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:243 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:244 Prediction 1 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
-array:245 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:246 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:247 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:248 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:249 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:250 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:251 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:252 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:253 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:254 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:255 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:256 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:257 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:258 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:259 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:260 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:261 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:262 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:263 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:264 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:265 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:266 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:267 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:268 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:269 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:270 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:271 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:272 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:273 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:274 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:275 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:276 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:277 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:278 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:279 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:280 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:281 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:282 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:283 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:284 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:285 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:286 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:287 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:288 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:289 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:290 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:291 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:292 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:293 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:294 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:295 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:296 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:297 Prediction 2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
-array:298 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
-array:299 Prediction 0 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:0 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:1 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:2 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:3 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:4 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:5 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:6 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:7 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:8 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:9 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:10 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:11 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:12 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:13 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:14 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:15 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:16 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:17 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:18 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:19 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:20 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:21 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:22 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:23 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:24 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:25 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:26 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:27 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:28 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:29 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:30 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:31 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:32 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:33 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:34 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:35 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:36 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:37 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:38 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:39 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:40 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:41 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:42 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:43 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:44 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:45 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:46 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:47 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:48 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:49 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:50 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:51 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:52 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:53 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:54 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:55 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:56 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:57 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:58 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:59 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:60 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:61 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:62 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:63 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:64 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:65 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:66 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:67 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:68 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:69 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:70 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:71 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:72 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:73 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:74 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:75 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:76 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:77 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:78 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:79 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:80 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:81 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:82 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:83 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:84 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:85 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:86 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:87 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:88 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:89 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:90 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:91 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:92 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:93 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:94 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:95 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:96 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:97 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:98 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:99 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:100 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:101 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:102 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:103 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:104 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:105 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:106 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:107 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:108 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:109 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:110 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:111 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:112 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:113 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:114 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:115 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:116 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:117 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:118 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:119 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:120 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:121 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:122 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:123 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:124 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:125 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:126 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:127 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:128 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:129 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:130 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:131 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:132 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:133 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:134 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:135 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:136 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:137 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:138 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:139 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:140 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:141 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:142 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:143 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:144 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:145 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:146 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:147 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:148 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:149 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:150 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:151 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:152 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:153 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:154 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:155 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:156 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:157 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:158 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:159 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:160 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:161 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:162 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:163 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:164 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:165 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:166 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:167 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:168 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:169 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:170 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:171 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:172 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:173 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:174 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:175 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:176 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:177 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:178 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:179 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:180 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:181 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:182 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:183 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:184 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:185 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:186 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:187 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:188 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:189 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:190 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:191 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:192 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:193 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:194 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:195 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:196 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:197 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:198 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:199 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:200 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:201 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:202 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:203 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:204 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:205 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:206 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:207 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:208 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:209 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:210 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:211 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:212 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:213 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:214 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:215 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:216 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:217 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:218 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:219 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:220 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:221 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:222 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:223 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:224 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:225 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:226 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:227 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:228 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:229 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:230 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:231 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:232 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:233 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:234 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:235 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:236 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:237 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:238 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:239 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:240 talk.politics.mideast 0.9577 talk.politics.misc 0.0423
+array:241 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:242 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:243 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:244 talk.politics.guns 0.0114 talk.politics.mideast 0.9343 talk.politics.misc 0.0543
+array:245 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:246 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:247 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:248 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:249 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:250 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:251 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:252 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:253 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:254 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:255 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:256 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:257 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:258 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:259 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:260 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:261 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:262 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:263 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:264 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:265 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:266 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:267 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:268 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:269 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:270 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:271 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:272 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:273 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:274 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:275 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:276 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:277 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:278 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:279 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:280 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:281 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:282 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:283 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:284 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:285 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:286 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:287 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:288 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:289 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:290 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:291 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:292 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:293 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:294 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:295 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:296 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:297 talk.politics.guns 0.3322 talk.politics.mideast 0.2143 talk.politics.misc 0.4534
+array:298 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
+array:299 talk.politics.guns 0.8468 talk.politics.mideast 0.0087 talk.politics.misc 0.1445
