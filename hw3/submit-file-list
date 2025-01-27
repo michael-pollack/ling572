@@ -1,0 +1,14 @@
+build_NB.sh
+
+q1/model_file
+q1/sys_output
+q1/acc_file
+
+
+build_kNN.sh
+q2/sys_output
+q2/acc_file
+
+
+
+
