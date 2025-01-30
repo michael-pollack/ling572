@@ -34,7 +34,7 @@ def preprocess_data(data: pd.DataFrame) -> tuple[pd.DataFrame, np.ndarray, np.nd
     return data_train, labels_train, le.classes_
 
 class KNNClassifier:
-    def __init__(self, train_data: str, k: int = 3, distance_metric: str = 'euclidean') -> None:
+    def __init__(self, train_data: str, k: int = 3, distance_metric: str = '1') -> None:
         self.k = k
         self.pandas_data, self.labels, self.label_map = parse_input(train_data)
         self.distance_metric = distance_metric
@@ -80,9 +80,9 @@ class KNNClassifier:
         return predictions
     
     def predict_single(self, test_data: np.ndarray) -> int:
-        if self.distance_metric == 'euclidean':
+        if self.distance_metric == '1':
             distances = [self.euclidean_distance(test_data, train_data) for train_data in self.data]
-        elif self.distance_metric == 'cosine':
+        elif self.distance_metric == '2':
             distances = [self.cosine_distance(test_data, train_data) for train_data in self.data]
         else:
             raise ValueError(f"""
