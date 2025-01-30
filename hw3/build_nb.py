@@ -10,6 +10,7 @@ arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument('--train', type=str, required=True, help='training data')
 arg_parser.add_argument('--test', type=str, required=True, help='test data')
 arg_parser.add_argument('--model', type=str, required=True, help='model output file')
+arg_parser.add_argument('--output', type=str, required=True, help='system output file')
 args = arg_parser.parse_args()
 
 def parse_input(input) -> tuple[pd.DataFrame, np.ndarray, np.ndarray]:
@@ -31,12 +32,10 @@ def preprocess_data(data: pd.DataFrame) -> tuple[pd.DataFrame, np.ndarray, np.nd
 
 class NBClassifier:
     def __init__(self, train_data: str, model_file: str) -> None:
-         print("Classifier Initiated")
          self.data, self.labels, self.label_map = parse_input(train_data)
          self.class_priors = {}
          self.feature_likelihoods = {}
          self.classes = None
-         print("Beginning Training")
          self.fit(self.data, self.labels)
          self.print_model(model_file)
 
@@ -65,14 +64,12 @@ class NBClassifier:
             file.write(output)
 
     def predict(self, data: pd.DataFrame) -> tuple[np.ndarray, dict]:
-        print("Beginning Predictions")
         predictions = []
         full_predictions = {}
         count = 0
         for sample in data.values:
             class_probabilities = {}
             for cls in self.classes:
-                print(len(self.feature_likelihoods[cls]))
                 log_prob = np.log10(self.class_priors[cls]) + np.sum(np.log10(self.feature_likelihoods[cls]) * sample)
                 class_probabilities[cls] = log_prob
             predictions.append(max(class_probabilities, key=class_probabilities.get))
@@ -80,21 +77,23 @@ class NBClassifier:
             count += 1
         return np.array(predictions), full_predictions
     
-    def run_test(self, test: str) -> None:
+    def run_test(self, test: str, output_file: str) -> None:
         test_data = self.process_test_data(test)
         predictions, full_predictions = self.predict(test_data)
-        self.print_predictions(predictions, full_predictions)
+        self.print_predictions(predictions, full_predictions, output_file)
     
-    def print_predictions(self, predictions: np.ndarray, full_predictions: dict) -> None:
+    def print_predictions(self, predictions: np.ndarray, full_predictions: dict, output_file: str) -> None:
         output = ""
-        for pred in range(len(predictions)):
-            prediction = predictions[pred]
-            full_pred = full_predictions[pred]
-            output += f"array:{pred} {prediction}"
-            for cls in self.classes:
-                output += f" {cls} {full_pred[cls]}"
-            output += "\n"
-        print(output)
+        with open(output_file, 'w') as out_file:
+            for pred_index in range(len(predictions)):
+                prediction = self.label_map[predictions[pred_index]]
+                full_pred = full_predictions[pred_index]
+                output += f"array:{pred_index} {prediction}"
+                sorted_classes = sorted(full_pred, key=full_pred.get, reverse=True)
+                for cls in sorted_classes:
+                    output += f" {self.label_map[cls]} {full_pred[cls]}"
+                output += "\n"
+            out_file.write(output)
 
     #account for differences in shape between train and test data
     def process_test_data(self, input: str) -> pd.DataFrame:
@@ -108,7 +107,7 @@ def main() -> None:
     with open(args.train, 'r') as train:
         with open(args.test, 'r') as test:
             classifier = NBClassifier(train, args.model)
-            classifier.run_test(test)
+            classifier.run_test(test, args.output)
 
 
 if __name__ == "__main__":
