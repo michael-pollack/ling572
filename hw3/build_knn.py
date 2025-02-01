@@ -54,8 +54,8 @@ class KNNClassifier:
             pred_table[real_label][pred_label] += 1
         #Construct the output file
         acc_output = f"""
-        Confusion matrix for the training data:
-        row is the truth, column is the system output
+Confusion matrix for the training data:
+row is the truth, column is the system output
 
         \t\t
         """
@@ -70,7 +70,7 @@ class KNNClassifier:
             acc_output += f"\n"
         
         acc_label = "Training" if training else "Testing"
-        acc_output += f"{acc_label} accuracy: {total_acc}\n"
+        acc_output += f"{acc_label} accuracy={total_acc}\n\n"
 
         return acc_output
     

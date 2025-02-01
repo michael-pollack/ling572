@@ -50,7 +50,9 @@ class NBClassifier:
             self.class_priors[cls] = (len(class_samples) + prdelta) / (total_samples + (len(self.classes) * prdelta))
             feature_counts = np.sum(class_samples, axis=0)
             total_feature_count = np.sum(feature_counts)
+            cpdelta = max(cpdelta, 1e-6)
             self.feature_likelihoods[cls] = (feature_counts + cpdelta) / (total_feature_count + (cpdelta * data.shape[1]))
+
     
     def print_model(self, model_file: str) -> None:
         with open(model_file, 'w') as file:
@@ -74,6 +76,15 @@ class NBClassifier:
             for cls in self.classes:
                 log_prob = np.log10(self.class_priors[cls]) + np.sum(np.log10(self.feature_likelihoods[cls]) * sample)
                 class_probabilities[cls] = log_prob
+
+            max_log_prob = max(class_probabilities.values())
+            for cls in class_probabilities:
+                class_probabilities[cls] = 10 ** (class_probabilities[cls] - max_log_prob)
+            
+            total_prob = sum(class_probabilities.values())
+            for cls in class_probabilities:
+                class_probabilities[cls] /= total_prob
+
             predictions.append(max(class_probabilities, key=class_probabilities.get))
             full_predictions[count] = class_probabilities
             count += 1
@@ -97,7 +108,7 @@ class NBClassifier:
                 output += f"array:{pred_index} {prediction}"
                 sorted_classes = sorted(full_pred, key=full_pred.get, reverse=True)
                 for cls in sorted_classes:
-                    output += f" {self.label_map[cls]} {full_pred[cls]}"
+                    output += f" {self.label_map[cls]} {full_pred[cls]:.4f}"
                 output += "\n"
             out_file.write(output)
     
@@ -113,8 +124,8 @@ class NBClassifier:
             pred_table[real_label][pred_label] += 1
         #Construct the output file
         acc_output = f"""
-        Confusion matrix for the training data:
-        row is the truth, column is the system output
+Confusion matrix for the training data:
+row is the truth, column is the system output
 
         \t\t
         """
@@ -129,14 +140,14 @@ class NBClassifier:
             acc_output += f"\n"
         
         acc_label = "Training" if training else "Testing"
-        acc_output += f"{acc_label} accuracy: {total_acc}\n"
+        acc_output += f"{acc_label} accuracy={total_acc}\n\n"
 
         return acc_output
 
     #account for differences in shape between train and test data
     def process_test_data(self, input: str) -> pd.DataFrame:
         raw_test_data, test_labels, _ = parse_input(input)
-        return raw_test_data.reindex(columns=self.data.columns, fill_value=0), test_labels
+        return raw_test_data.reindex(columns=self.data.columns, fill_value=1e-6), test_labels
 
     
 def main() -> None:
