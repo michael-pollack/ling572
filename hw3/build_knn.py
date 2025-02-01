@@ -89,17 +89,22 @@ class KNNClassifier:
                 test_data, test_labels, _ = parse_input(in_file)
                 test_data = test_data.reindex(columns=self.pandas_data.columns, fill_value=0)
                 test_data = np.array(test_data)
+                train_start = time.process_time()
                 train_preds = self.predict(self.data)
                 _, top_train_preds = self.process_predictions(train_preds, True)
                 acc = self.run_acc(top_train_preds, self.labels, True)
+                train_end = time.process_time()
+                acc += f"Total Training CPU time: {(train_end - train_start) / 60} minutes\n"
+                test_start = time.process_time()
                 test_preds = self.predict(test_data)
                 printed_predictions, top_test_preds = self.process_predictions(test_preds)
                 acc += self.run_acc(top_test_preds, test_labels)
+                test_end = time.process_time()
+                acc += f"Total Testing CPU time: {(test_end - test_start) / 60} minutes\n"
                 write_file.write(printed_predictions)
         return acc
     
     def process_predictions(self, predictions: np.ndarray, training: bool=False) -> tuple[str, np.ndarray]:
-        print("entering")
         printed_predictions = ""
         top_preds = []
         for index in range(len(predictions)):
@@ -146,14 +151,10 @@ class KNNClassifier:
         return probabilities
 
 def main() -> None:
-    start = time.process_time()
     with open(args.train, 'r') as train:
         classifier = KNNClassifier(train, int(args.k), args.function)
         acc = classifier.run_test(args.test, args.output)
         print(acc)
-    
-    end = time.process_time()
-    print(f"Total CPU time: {(end - start) / 60} minutes")
 
 if __name__ == "__main__":
     result = main()

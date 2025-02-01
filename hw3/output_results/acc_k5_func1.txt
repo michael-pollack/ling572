@@ -1,0 +1,23 @@
+
+        Confusion matrix for the training data:
+        row is the truth, column is the system output
+
+        		
+        	talk.politics.guns	talk.politics.mideast	talk.politics.misc
+talk.politics.guns	759	81	60
+talk.politics.mideast	18	850	32
+talk.politics.misc	93	101	706
+Training accuracy: 0.8574074074074074
+Total Training CPU time: 15.519058000000001 minutes
+
+        Confusion matrix for the training data:
+        row is the truth, column is the system output
+
+        		
+        	talk.politics.guns	talk.politics.mideast	talk.politics.misc
+talk.politics.guns	64	22	14
+talk.politics.mideast	13	76	11
+talk.politics.misc	28	20	52
+Testing accuracy: 0.64
+Total Testing CPU time: 2.178861466666666 minutes
+

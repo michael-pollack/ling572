@@ -11,6 +11,8 @@ arg_parser.add_argument('--train', type=str, required=True, help='training data'
 arg_parser.add_argument('--test', type=str, required=True, help='test data')
 arg_parser.add_argument('--model', type=str, required=True, help='model output file')
 arg_parser.add_argument('--output', type=str, required=True, help='system output file')
+arg_parser.add_argument('--cpdelta', type=str, required=True, help='conditional probability delta')
+arg_parser.add_argument('--prdelta', type=str, required=True, help='class prior delta')
 args = arg_parser.parse_args()
 
 def parse_input(input) -> tuple[pd.DataFrame, np.ndarray, np.ndarray]:
@@ -31,24 +33,24 @@ def preprocess_data(data: pd.DataFrame) -> tuple[pd.DataFrame, np.ndarray, np.nd
     return data_train, labels_train, le.classes_
 
 class NBClassifier:
-    def __init__(self, train_data: str, model_file: str) -> None:
+    def __init__(self, train_data: str, model_file: str, prdelta: float=0, cpdelta: float=1) -> None:
          self.data, self.labels, self.label_map = parse_input(train_data)
          self.class_priors = {}
          self.feature_likelihoods = {}
          self.classes = None
-         self.fit(self.data, self.labels)
+         self.fit(self.data, self.labels, prdelta, cpdelta)
          self.print_model(model_file)
 
-    def fit(self, data: pd.DataFrame, labels: np.ndarray) -> None:
+    def fit(self, data: pd.DataFrame, labels: np.ndarray, prdelta: float=0, cpdelta: float=1) -> None:
         #alphabetically sorted class list
         self.classes = np.sort(np.unique(labels))
         total_samples = data.shape[0]
         for cls in self.classes:
             class_samples = data[labels == cls]
-            self.class_priors[cls] = len(class_samples) / total_samples
+            self.class_priors[cls] = (len(class_samples) + prdelta) / (total_samples + (len(self.classes) * prdelta))
             feature_counts = np.sum(class_samples, axis=0)
             total_feature_count = np.sum(feature_counts)
-            self.feature_likelihoods[cls] = (feature_counts + 1) / (total_feature_count + data.shape[1])
+            self.feature_likelihoods[cls] = (feature_counts + cpdelta) / (total_feature_count + (cpdelta * data.shape[1]))
     
     def print_model(self, model_file: str) -> None:
         with open(model_file, 'w') as file:
@@ -78,9 +80,13 @@ class NBClassifier:
         return np.array(predictions), full_predictions
     
     def run_test(self, test: str, output_file: str) -> None:
-        test_data = self.process_test_data(test)
-        predictions, full_predictions = self.predict(test_data)
-        self.print_predictions(predictions, full_predictions, output_file)
+        train_preds, full_train_preds = self.predict(self.data)
+        acc = self.run_acc(train_preds, self.labels, True)
+        test_data, test_labels = self.process_test_data(test)
+        test_preds, full_test_preds = self.predict(test_data)
+        acc += self.run_acc(test_preds, test_labels)
+        print(acc)
+        self.print_predictions(test_preds, full_test_preds, output_file)
     
     def print_predictions(self, predictions: np.ndarray, full_predictions: dict, output_file: str) -> None:
         output = ""
@@ -94,19 +100,49 @@ class NBClassifier:
                     output += f" {self.label_map[cls]} {full_pred[cls]}"
                 output += "\n"
             out_file.write(output)
+    
+    def run_acc(self, top_preds: np.ndarray, real_labels: np.ndarray, training: bool=False) -> str: 
+        pred_table = [[0 for _ in self.label_map] for _ in self.label_map]
+        correct = (real_labels == top_preds).sum()
+        total = len(real_labels)
+        total_acc = correct / total
+
+        for index in range(len(top_preds)):
+            real_label = real_labels[index]
+            pred_label = top_preds[index]
+            pred_table[real_label][pred_label] += 1
+        #Construct the output file
+        acc_output = f"""
+        Confusion matrix for the training data:
+        row is the truth, column is the system output
+
+        \t\t
+        """
+        for label in self.label_map:
+            acc_output += f"\t{label}"
+        acc_output += "\n"
+
+        for real_label in range(len(self.label_map)):
+            acc_output += f"{self.label_map[real_label]}"
+            for pred_label in range(len(self.label_map)):
+                acc_output += f"\t{pred_table[real_label][pred_label]}"
+            acc_output += f"\n"
+        
+        acc_label = "Training" if training else "Testing"
+        acc_output += f"{acc_label} accuracy: {total_acc}\n"
+
+        return acc_output
 
     #account for differences in shape between train and test data
     def process_test_data(self, input: str) -> pd.DataFrame:
-        raw_test_data, _, _ = parse_input(input)
-        return raw_test_data.reindex(columns=self.data.columns, fill_value=0)
-
-
+        raw_test_data, test_labels, _ = parse_input(input)
+        return raw_test_data.reindex(columns=self.data.columns, fill_value=0), test_labels
 
     
 def main() -> None:
     with open(args.train, 'r') as train:
         with open(args.test, 'r') as test:
-            classifier = NBClassifier(train, args.model)
+            classifier = NBClassifier(train, args.model, float(args.prdelta), float(args.cpdelta))
             classifier.run_test(test, args.output)
 
 
