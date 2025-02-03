@@ -41,6 +41,7 @@ class KNNClassifier:
         self.label_set = set(self.labels)
         self.distance_metric = distance_metric
         self.data = np.array(self.pandas_data)
+        self.norms = np.array([np.linalg.norm(sample) for sample in self.data])
 
     def run_acc(self, top_preds: np.ndarray, real_labels: np.ndarray, training: bool=False) -> str: 
         pred_table = [[0 for _ in self.label_map] for _ in self.label_map]
@@ -77,10 +78,9 @@ row is the truth, column is the system output
     def euclidean_distance(self, x1: np.ndarray, x2: np.ndarray) -> float:
         return np.sqrt(np.sum((x1 - x2) ** 2))
     
-    def cosine_distance(self, x1: np.ndarray, x2: np.ndarray) -> float:
+    def cosine_distance(self, x1: np.ndarray, x2: np.ndarray, norm_x2:float) -> float:
         dot_product = np.dot(x1, x2)
         norm_x1 = np.linalg.norm(x1)
-        norm_x2 = np.linalg.norm(x2)
         return 1 - (dot_product / (norm_x1 * norm_x2)) if norm_x1 != 0 and norm_x2 != 0 else 1.0
 
     def run_test(self, test_file: str, output_file: str) -> str:
@@ -130,7 +130,7 @@ row is the truth, column is the system output
         if self.distance_metric == '1':
             distances = [self.euclidean_distance(test_data, train_data) for train_data in self.data]
         elif self.distance_metric == '2':
-            distances = [self.cosine_distance(test_data, train_data) for train_data in self.data]
+            distances = [self.cosine_distance(test_data, self.data[index], self.norms[index]) for index in range(len(self.data))]
         else:
             raise ValueError(f"""
                              Hey you fool, we only take \'cosine\' or \'euclidean\' here.\n
