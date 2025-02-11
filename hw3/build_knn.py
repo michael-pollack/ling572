@@ -133,9 +133,9 @@ row is the truth, column is the system output
             distances = [self.cosine_distance(test_data, self.data[index], self.norms[index]) for index in range(len(self.data))]
         else:
             raise ValueError(f"""
-                             Hey you fool, we only take \'cosine\' or \'euclidean\' here.\n
-                             You think you can just throw another distance metric into the mix?\n
-                             Honestly, how dare you.
+Hey you fool, we only take \'cosine\' or \'euclidean\' here.\n
+You think you can just throw another distance metric into the mix?\n
+Honestly, how dare you.
                              """)
         # Get the indices of the k nearest neighbors
         k_indices = np.argsort(distances)[:self.k]
