@@ -25,10 +25,10 @@ def f4(x: list[float]) -> float:
     return x[0]**2 + (1200 * (x[1]**2))
 
 def g1(x: list[float]) -> float:
-    return math.sin(3 * x[0])
+    return np.sin(3 * x[0])
 
 def g2(x: list[float]) -> float:
-    return math.sin(3 * x[0]) + (0.1 * (x[0]**2))
+    return np.sin(3 * x[0]) + (0.1 * (x[0]**2))
 
 def g3(x: list[float]) -> float:
     return (x[0]**2) + 0.2
@@ -46,7 +46,6 @@ def g6(x: list[float]) -> float:
 class Minimizer:
 
     def __init__(self, learning_rate: int, iter: int, method: str, x1: float, x2: float, func: str) -> None:
-        print("Hiya")
         self.learning_rate = learning_rate
         self.iter = iter
         self.x1 = x1
@@ -64,20 +63,20 @@ class Minimizer:
     def random_search(self, func) -> str:
         best_score = float("inf")
         output = ""
+        x1, x2 = self.x1, self.x2
         for i in range(self.iter):
             for _ in range(10):
-                rand_x1 = np.random.uniform(-1, 1)
-                rand_x2 = np.sqrt(1 - (x1**2))
-                directions = [(rand_x1, rand_x2), (rand_x1, -1*rand_x2)]
+                dx1 = np.random.uniform(-1, 1)
+                dx2 = np.sqrt(1 - (dx1**2))
+                directions = [(dx1, dx2), (dx1, -1*dx2)]
 
-                for dx1, dx2 in directions:
-                    new_x1 = x1 + self.learning_rate * dx1
-                    new_x2 = x2 + self.learning_rate * dx2
+                for d1, d2 in directions:
+                    new_x1 = x1 + self.learning_rate * d1
+                    new_x2 = x2 + self.learning_rate * d2
                     new_score = func([new_x1, new_x2])
-
-                if new_score < best_score:
-                    best_score = new_score
-                    x1, x2 = new_x1, new_x2
+                    if new_score < best_score:
+                        best_score = new_score
+                        x1, x2 = new_x1, new_x2
 
             output += f"{i}\t{x1}\t{x2}\t{best_score}\n"
 
