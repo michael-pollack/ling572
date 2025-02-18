@@ -112,9 +112,9 @@ class Minimizer:
         directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
         for i in range(1, self.iter + 1):
-            these_directions = directions[2:] if i % 2 == 0 else directions[:2]
+            axis = directions[2:] if i % 2 == 0 else directions[:2]
             improved = False
-            for dx1, dx2 in these_directions:
+            for dx1, dx2 in axis:
                 new_x1, new_x2 = x1 + (dx1 * self.learning_rate), x2 + (dx2 * self.learning_rate)
                 dir_score = func([new_x1, new_x2])
                 if dir_score < best_score:
