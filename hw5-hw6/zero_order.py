@@ -58,13 +58,11 @@ class Minimizer:
         else:
             self.output = self.coordinate_descent(local_func)
 
-        
-
     def random_search(self, func) -> str:
-        best_score = float("inf")
-        output = ""
         x1, x2 = self.x1, self.x2
-        for i in range(self.iter):
+        best_score = func([x1, x2])
+        output = f"{0}\t{x1:.5g}\t{x2:.5g}\t{best_score:.5g}\n"
+        for i in range(1, self.iter + 1):
             for _ in range(10):
                 dx1 = np.random.uniform(-1, 1)
                 dx2 = np.sqrt(1 - (dx1**2))
@@ -78,18 +76,18 @@ class Minimizer:
                         best_score = new_score
                         x1, x2 = new_x1, new_x2
 
-            output += f"{i}\t{x1}\t{x2}\t{best_score}\n"
+            output += f"{i:.5g}\t{x1:.5g}\t{x2:.5g}\t{best_score:.5g}\n"
 
         return output
 
     def coordinate_search(self, func) -> str:
         x1, x2 = self.x1, self.x2
         best_score = func([x1, x2])
-        output = ""
+        output = f"{0}\t{x1:.5g}\t{x2:.5g}\t{best_score:.5g}\n"
+        directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
-        for i in range(self.iter):
+        for i in range(1, self.iter + 1):
             improved = False
-            directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
             for dx1, dx2 in directions:
                 new_x1, new_x2 = x1 + (dx1 * self.learning_rate), x2 + (dx2 * self.learning_rate)
@@ -100,7 +98,7 @@ class Minimizer:
                     x1, x2 = new_x1, new_x2
                     improved = True
             
-            output += f"{i}\t{x1}\t{x2}\t{best_score}\n"
+            output += f"{i}\t{x1:.5g}\t{x2:.5g}\t{best_score:.5g}\n"
             if not improved:
                 break
         
@@ -109,35 +107,25 @@ class Minimizer:
     def coordinate_descent(self, func) -> str:
         x1, x2 = self.x1, self.x2
         best_score = func([x1, x2])
-        improved = 0
-        output = ""
+        not_improved = 0
+        output = f"{0}\t{x1:.5g}\t{x2:.5g}\t{best_score:.5g}\n"
+        directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
-        for i in range(self.iter):
-
-            if i % 2 == 1:
-                for dx1 in [self.learning_rate, -self.learning_rate]:
-                    new_x1 = x1 + (dx1 * self.learning_rate)
-                    new_score = func(new_x1)
-                    if new_score < best_score:
-                        x1 = new_x1
-                        best_score = new_score
-                        improved = 0
-                    else:
-                        improved += 1
-            
-            else: 
-                for dx2 in [self.learning_rate, -self.learning_rate]:
-                    new_x2 = x2 + (dx2 * self.learning_rate)
-                    new_score = func(new_x2)
-                    if new_score < best_score:
-                        x2 = new_x2
-                        best_score = new_score
-                        improved = 0
-                    else:
-                        improved += 1
-            
-            output += f"{i}\t{x1}\t{x2}\t{best_score}\n"
-            if improved >= 2:
+        for i in range(1, self.iter + 1):
+            these_directions = directions[2:] if i % 2 == 0 else directions[:2]
+            improved = False
+            for dx1, dx2 in these_directions:
+                new_x1, new_x2 = x1 + (dx1 * self.learning_rate), x2 + (dx2 * self.learning_rate)
+                dir_score = func([new_x1, new_x2])
+                if dir_score < best_score:
+                    x1, x2 = new_x1, new_x2
+                    best_score = dir_score
+                    improved = True
+                    not_improved = 0
+            output += f"{i}\t{x1:.5g}\t{x2:.5g}\t{best_score:.5g}\n"
+            if not improved:
+                not_improved += 1
+            if not_improved >= 2:
                 break
         
         return output

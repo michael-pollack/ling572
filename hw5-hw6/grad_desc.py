@@ -46,7 +46,7 @@ class GradDescent:
     def __init__(self, learning_rate: int, iter: int, x: list[float]) -> None:
         self.learning_rate = learning_rate
         self.iter = iter
-        self.x = x
+        self.x = np.atleast_1d(x)
         self.m = 5
         self.e = 0.001
 
@@ -60,7 +60,7 @@ class GradDescent:
         for i in range(self.iter):
             grad = gradient(wk_1)
             wk = wk_1 - self.learning_rate * grad
-            if abs(wk - wk_1) < self.e and abs(func(wk) - func(wk_1)) < self.e:
+            if np.linalg.norm(wk - wk_1) < self.e and abs(func(wk) - func(wk_1)) < self.e:
                 m_counter += 1
             else:
                 m_counter = 0
@@ -68,28 +68,36 @@ class GradDescent:
                 converge = True
                 break
 
-        w_val = ""
-        for j in len(wk_1):
-            w_val += f"\t{wk_1[j]}"
-        
-        output += f"{i}{w_val}\t{func(wk_1)}\n"
+            w_val = ""
+            for j in range(len(wk_1)):
+                w_val += f"\t{wk_1[j]}"
+            output += f"{i}{w_val}\t{func(wk_1)}\n"
+            wk_1 = wk
 
         if not converge:
             output += "no"
-        elif abs(wk_1) < 10**8 and func(wk_1) < 10**8:
-            output += "yes"
         else:
-            output += "yes-but-diverge"
+            w_val = ""
+            for j in range(len(wk_1)):
+                w_val += f"\t{wk_1[j]}"
+                output += f"{i}{w_val}\t{func(wk_1)}\n"
+                wk_1 = wk
+            if abs(wk_1) < 10**8 and func(wk_1) < 10**8:
+                output += "yes"
+            else:
+                output += "yes-but-diverge"
         return output
     
 def main():
+    print("bonjour")
     if (args.x2_val == None):
         x = args.x1_val
     else:
         x = [args.x1_val, args.x2_val]
     descender = GradDescent(args.learning_rate, args.iteration_number, x)
-    func = globals.get(args.func_name)
+    func = globals().get(args.func_name)
     result = descender.gradient_descent(func)
     print(result)
 
-
+if __name__ == "__main__":
+    result = main()
