@@ -52,20 +52,34 @@ class GradDescent:
 
     def gradient_descent(self, func) -> str:
         output = ""
-        x = np.array(self.x)
-        history = []
+        converge = False
+        m_counter = 0
+        wk_1 = np.array(self.x)
         gradient = nd.Gradient(func)
 
         for i in range(self.iter):
-            grad = gradient(x)
-            x = x - self.learning_rate * grad
-            func_output = func(x)
+            grad = gradient(wk_1)
+            wk = wk_1 - self.learning_rate * grad
+            if abs(wk - wk_1) < self.e and abs(func(wk) - func(wk_1)) < self.e:
+                m_counter += 1
+            else:
+                m_counter = 0
+            if m_counter == self.m:
+                converge = True
+                break
 
-        x_val = ""
-        for j in len(x):
-            x_val += f"\t{x[j]}"
+        w_val = ""
+        for j in len(wk_1):
+            w_val += f"\t{wk_1[j]}"
         
-        output += f"{i}{x_val}\t{func_output}\n"
+        output += f"{i}{w_val}\t{func(wk_1)}\n"
+
+        if not converge:
+            output += "no"
+        elif abs(wk_1) < 10**8 and func(wk_1) < 10**8:
+            output += "yes"
+        else:
+            output += "yes-but-diverge"
         return output
     
 def main():
