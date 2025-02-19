@@ -63,19 +63,24 @@ class Minimizer:
         best_score = func([x1, x2])
         output = f"{0}\t{x1:.5g}\t{x2:.5g}\t{best_score:.5g}\n"
         for i in range(1, self.iter + 1):
+            directions = []
             for _ in range(10):
                 dx1 = np.random.uniform(-1, 1)
                 dx2 = np.sqrt(1 - (dx1**2))
-                directions = [(dx1, dx2), (dx1, -1*dx2)]
-
-                for d1, d2 in directions:
-                    new_x1 = x1 + self.learning_rate * d1
-                    new_x2 = x2 + self.learning_rate * d2
-                    new_score = func([new_x1, new_x2])
-                    if new_score < best_score:
-                        best_score = new_score
-                        x1, x2 = new_x1, new_x2
-
+                directions.append((dx1, dx2))
+                directions.append((dx1, -1*dx2))
+            
+            temp_x1, temp_x2 = x1, x2
+            for d1, d2 in directions:
+                new_x1 = x1 + self.learning_rate * d1
+                new_x2 = x2 + self.learning_rate * d2
+                new_score = func([new_x1, new_x2])
+                if new_score < best_score:
+                    best_score = new_score
+                    temp_x1 = new_x1
+                    temp_x2 = new_x2
+            x1, x2 = temp_x1, temp_x2
+                
             output += f"{i:.5g}\t{x1:.5g}\t{x2:.5g}\t{best_score:.5g}\n"
 
         return output
@@ -89,14 +94,16 @@ class Minimizer:
         for i in range(1, self.iter + 1):
             improved = False
 
+            temp_x1, temp_x2 = x1, x2
             for dx1, dx2 in directions:
                 new_x1, new_x2 = x1 + (dx1 * self.learning_rate), x2 + (dx2 * self.learning_rate)
                 new_score = func([new_x1, new_x2])
 
                 if new_score < best_score:
                     best_score = new_score
-                    x1, x2 = new_x1, new_x2
+                    temp_x1, temp_x2 = new_x1, new_x2
                     improved = True
+            x1, x2 = temp_x1, temp_x2
             
             output += f"{i}\t{x1:.5g}\t{x2:.5g}\t{best_score:.5g}\n"
             if not improved:
@@ -114,14 +121,16 @@ class Minimizer:
         for i in range(1, self.iter + 1):
             axis = directions[2:] if i % 2 == 0 else directions[:2]
             improved = False
+            temp_x1, temp_x2 = x1, x2
             for dx1, dx2 in axis:
                 new_x1, new_x2 = x1 + (dx1 * self.learning_rate), x2 + (dx2 * self.learning_rate)
                 dir_score = func([new_x1, new_x2])
                 if dir_score < best_score:
-                    x1, x2 = new_x1, new_x2
+                    temp_x1, temp_x2 = new_x1, new_x2
                     best_score = dir_score
                     improved = True
                     not_improved = 0
+            x1, x2 = temp_x1, temp_x2
             output += f"{i}\t{x1:.5g}\t{x2:.5g}\t{best_score:.5g}\n"
             if not improved:
                 not_improved += 1

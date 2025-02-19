@@ -82,14 +82,13 @@ class GradDescent:
                 w_val += f"\t{wk_1[j]}"
                 output += f"{i}{w_val}\t{func(wk_1)}\n"
                 wk_1 = wk
-            if abs(wk_1) < 10**8 and func(wk_1) < 10**8:
+            if np.linalg.norm(wk_1) < 10**8 and func(wk_1) < 10**8:
                 output += "yes"
             else:
                 output += "yes-but-diverge"
         return output
     
 def main():
-    print("bonjour")
     if (args.x2_val == None):
         x = args.x1_val
     else:
