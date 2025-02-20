@@ -7,7 +7,7 @@ arg_parser.add_argument('--func_name', type=str)
 arg_parser.add_argument('--learning_rate', type=float)
 arg_parser.add_argument('--iteration_number', type=int)
 arg_parser.add_argument('--x1_val', type=float)
-arg_parser.add_argument('--x2_val', type=float)
+arg_parser.add_argument('--x2_val', type=float, required=False, default=None)
 args = arg_parser.parse_args()
 
 def f1(x: list[float]) -> float:
@@ -22,24 +22,27 @@ def f3(x: list[float]) -> float:
 def f4(x: list[float]) -> float:
     return x[0]**2 + (1200 * (x[1]**2))
 
-def g1(x: list[float]) -> float:
+def g1(x: np.ndarray) -> float:
     return np.sin(3 * x[0])
 
-def g2(x: list[float]) -> float:
+def g2(x: np.ndarray) -> float:
     return np.sin(3 * x[0]) + (0.1 * (x[0]**2))
 
-def g3(x: list[float]) -> float:
+def g3(x: np.ndarray) -> float:
     return (x[0]**2) + 0.2
 
-def g4(x: list[float]) -> float:
+def g4(x: np.ndarray) -> float:
     return x[0]**3
 
-def g5(x: list[float]) -> float:
+def g5(x: np.ndarray) -> float:
     return ((x[0]**4) + (x[0]**2) + (10 * x[0])) / 50
 
 #Now I'm feeling so fly like a
-def g6(x: list[float]) -> float:
-    return max(0, (((3 * x[0]) - 2.3)**3 + 1))**2 + max(0, (((-3 * x[0]) - 0.7)**3 + 1))**2
+def g6(x):
+    term1 = max(0, (3*x[0] - 2.3)**3 + 1)**2
+    term2 = max(0, (-3*x[0] + 0.7)**3 + 1)**2
+    return term1 + term2
+
 
 class GradDescent:
 
@@ -56,32 +59,29 @@ class GradDescent:
         m_counter = 0
         wk_1 = np.array(self.x)
         gradient = nd.Gradient(func)
+        w_val = ""
+        for j in range(len(wk_1)):
+            w_val += f"\t{wk_1[j]:.5g}"
+        output += f"{0}{w_val}\t{func(wk_1):.5g}\n"
 
-        for i in range(self.iter):
-            grad = gradient(wk_1)
-            wk = wk_1 - self.learning_rate * grad
+        for i in range(1, self.iter + 1):
+            grad = -1 * gradient(wk_1)
+            wk = wk_1 + self.learning_rate * grad
             if np.linalg.norm(wk - wk_1) < self.e and abs(func(wk) - func(wk_1)) < self.e:
                 m_counter += 1
             else:
                 m_counter = 0
+            w_val = ""
+            for j in range(len(wk)):
+                w_val += f"\t{wk[j]:.5g}"
+            output += f"{i}{w_val}\t{func(wk):.5g}\n"
+            wk_1 = wk
             if m_counter == self.m:
                 converge = True
-                break
-
-            w_val = ""
-            for j in range(len(wk_1)):
-                w_val += f"\t{wk_1[j]}"
-            output += f"{i}{w_val}\t{func(wk_1)}\n"
-            wk_1 = wk
 
         if not converge:
             output += "no"
         else:
-            w_val = ""
-            for j in range(len(wk_1)):
-                w_val += f"\t{wk_1[j]}"
-                output += f"{i}{w_val}\t{func(wk_1)}\n"
-                wk_1 = wk
             if np.linalg.norm(wk_1) < 10**8 and func(wk_1) < 10**8:
                 output += "yes"
             else:
