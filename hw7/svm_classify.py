@@ -43,10 +43,9 @@ class Decoder:
             lines = f.readlines()
         
         sv_start = False
-        sv_coef = []
+        sv_coef = [] 
         support_vectors = []
-        
-        max_feature_index = 0  # Track max feature index from model
+        max_feature_index = 0  
 
         for line in lines:
             line = line.strip()
@@ -64,27 +63,33 @@ class Decoder:
                 self.rho = float(line.split()[1])
             elif line.startswith('SV'):
                 sv_start = True
-                continue
+                continue  
             
             if sv_start:
                 parts = line.split()
-                sv_coef.append(float(parts[0]))
-                vector = [float(x.split(":")[1]) for x in parts[1:]]
-                indices = [int(x.split(":")[0]) for x in parts[1:]]
-                
-                if indices:  # Check for empty support vectors
-                    max_feature_index = max(max_feature_index, max(indices))
-                
-                support_vectors.append(vector)
+                sv_coef.append(float(parts[0]))  
 
-        # Ensure all support vectors are the same length
-        for i in range(len(support_vectors)):
-            while len(support_vectors[i]) < max_feature_index + 1:
-                support_vectors[i].append(0.0)  # Pad with zeros
+                feature_dict = {}
+                for item in parts[1:]:
+                    index, value = item.split(":")
+                    index = int(index)
+                    value = float(value)
+                    feature_dict[index] = value
+                    max_feature_index = max(max_feature_index, index)
 
-        self.sv_coef = np.array(sv_coef, dtype=float)
-        self.support_vectors = np.array(support_vectors, dtype=float)
-        self.num_features = max_feature_index + 1  # Store for test alignment
+                support_vectors.append(feature_dict)
+
+        num_sv = len(support_vectors)
+        dense_support_vectors = np.zeros((num_sv, max_feature_index + 1))
+
+        for i, feature_dict in enumerate(support_vectors):
+            for index, value in feature_dict.items():
+                dense_support_vectors[i, index] = value
+
+        self.sv_coef = np.array(sv_coef, dtype=float) 
+        self.support_vectors = dense_support_vectors  
+        self.num_features = max_feature_index + 1  
+
 
 
     def kernel_function(self, x, y):
@@ -116,7 +121,7 @@ def load_libsvm_test_data(file_path: str, expected_features: int):
     
     for line in lines:
         parts = line.strip().split()
-        labels.append(int(parts[0]))  # Convert label to int
+        labels.append(int(parts[0])) 
         
         features = {}
         for item in parts[1:]:
@@ -127,13 +132,12 @@ def load_libsvm_test_data(file_path: str, expected_features: int):
         
         instances.append(features)
 
-    # Convert sparse representation to dense NumPy array with the same size as the model
     num_samples = len(instances)
     dense_data = np.zeros((num_samples, expected_features))
 
     for i, features in enumerate(instances):
         for index, value in features.items():
-            if index < expected_features:  # Ignore features beyond model's max feature index
+            if index < expected_features: 
                 dense_data[i, index] = value
 
     return dense_data, labels
