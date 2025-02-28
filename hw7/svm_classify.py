@@ -20,14 +20,13 @@ class Decoder:
         self.load_model(model_file)
 
     def run_predict(self, test_data, test_labels, sys_output):
-        print(test_data)
         predictions = self.predict(test_data)
         self.print_predictions(predictions, test_labels, sys_output)
 
     def print_predictions(self, predictions, test_labels, sys_output):
         accuracy = []
         output = ""
-        for i in predictions:
+        for i in range(len(predictions)):
             pred, fx = predictions[i]
             if pred == test_labels[i]:
                 accuracy.append(1)
@@ -44,7 +43,7 @@ class Decoder:
             lines = f.readlines()
         
         sv_start = False
-        labels = []
+        sv_coef = []
         support_vectors = []
         
         max_feature_index = 0  # Track max feature index from model
@@ -69,7 +68,7 @@ class Decoder:
             
             if sv_start:
                 parts = line.split()
-                labels.append(float(parts[0]))
+                sv_coef.append(float(parts[0]))
                 vector = [float(x.split(":")[1]) for x in parts[1:]]
                 indices = [int(x.split(":")[0]) for x in parts[1:]]
                 
@@ -83,7 +82,7 @@ class Decoder:
             while len(support_vectors[i]) < max_feature_index + 1:
                 support_vectors[i].append(0.0)  # Pad with zeros
 
-        self.sv_coef = np.array(labels)
+        self.sv_coef = np.array(sv_coef, dtype=float)
         self.support_vectors = np.array(support_vectors, dtype=float)
         self.num_features = max_feature_index + 1  # Store for test alignment
 
@@ -103,49 +102,48 @@ class Decoder:
     def predict(self, X):
         predictions = []
         for x in X:
-            print(x)
-            decision_value = sum(self.sv_coef[i] * self.kernel_function(self.support_vectors[i], x)
-                                 for i in range(len(self.sv_coef))) - self.rho
+            decision_value = sum(self.sv_coef[i] * self.kernel_function(self.support_vectors[i], x) for i in range(len(self.sv_coef))) - self.rho
             prediction = 0 if decision_value >= 0 else 1
             predictions.append((prediction, decision_value))
         return predictions
         
-def load_libsvm_test_data(file_path: str) -> np.ndarray:
+def load_libsvm_test_data(file_path: str, expected_features: int):
     with open(file_path, "r") as f:
         lines = f.readlines()
     
-    max_index = 0
     instances = []
     labels = []
     
     for line in lines:
         parts = line.strip().split()
-        features = {}
-        labels.append(int(parts[0]))
+        labels.append(int(parts[0]))  # Convert label to int
         
-        for item in parts[1:]:  # Ignore the first column (label)
+        features = {}
+        for item in parts[1:]:
             index, value = item.split(":")
             index = int(index)
             value = float(value)
             features[index] = value
-            max_index = max(max_index, index)
         
         instances.append(features)
 
-    # Convert sparse representation to dense NumPy array
+    # Convert sparse representation to dense NumPy array with the same size as the model
     num_samples = len(instances)
-    num_features = max_index + 1  # Feature indices start from 0
-    dense_data = np.zeros((num_samples, num_features))
+    dense_data = np.zeros((num_samples, expected_features))
 
     for i, features in enumerate(instances):
         for index, value in features.items():
-            dense_data[i, index] = value
+            if index < expected_features:  # Ignore features beyond model's max feature index
+                dense_data[i, index] = value
+
     return dense_data, labels
+
 
 def main():
     decoder = Decoder(args.model_file)
-    test_data, test_labels = load_libsvm_test_data(args.test_data)
+    test_data, test_labels = load_libsvm_test_data(args.test_data, decoder.num_features)
     decoder.run_predict(test_data, test_labels, args.sys_output)
+
     
 if __name__ == "__main__":
     result = main()
